@@ -1,0 +1,50 @@
+CREATE DATABASE prova_gydeao;
+
+USE prova_gydeao;
+
+CREATE TABLE pessoa(
+
+id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+
+nome VARCHAR(4000) NOT NULL
+
+);
+
+CREATE TABLE unidade_requisitante (
+
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+unidade VARCHAR(80) NOT NULL UNIQUE
+
+);
+
+SET SQL_MODE="";
+
+SET SQL_MODE="STRICT_ALL_TABLES";
+
+SELECT COUNT(*) FROM pessoa;
+
+SELECT id, nome FROM pessoa LIMIT 6;
+
+SELECT COUNT(*) FROM pessoa WHERE nome = "LUCIANE TERRA DOS SANTOS GARCIA";
+
+
+UPDATE pessoa
+SET NOME = "GYDEÃO DE JESUS WOLFF"
+WHERE id = 6; 
+
+UPDATE pessoa
+SET NOME = "GYDEÃO DE JESUS WOLFF"
+WHERE id = 60; 
+
+UPDATE pessoa
+SET NOME = "GYDEÃO DE JESUS WOLFF"
+WHERE id = 600; 
+
+SELECT id, nome FROM pessoa WHERE id = 6;
+
+SELECT id, nome FROM pessoa WHERE id = 60;
+
+SELECT id, nome FROM pessoa WHERE id = 600;
+
+
